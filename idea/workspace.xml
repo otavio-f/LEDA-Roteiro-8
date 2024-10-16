@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1011b589-d08b-4041-a9e2-87bcecadadb2" name="Changes" comment="Origin" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="0fb5c6faa06351d1fc01a120f4e6c3414406e35c" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2egairesR4P1fs3RGjVkmRUxKnz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.All in RoteiroEDA_TAD.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConjuntoDinamicoEncadeadoTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConjuntoDinamicoTestCase.buscarFailTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConjuntoDinamicoTestCase.buscarTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConjuntoDinamicoTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConjuntoDinamicoTestCase.inserirTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConjuntoDinamicoTestCase.maximumTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConjuntoDinamicoTestCase.minimumTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConjuntoDinamicoTestCase.predecessorTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConjuntoDinamicoTestCase.removerTeste.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ConjuntoDinamicoTestCase.sucessorTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.imprimeEmOrdemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.imprimeInversoTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.insertRemoverTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.insertsearchTeste.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.isEmptyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.predecessorTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.sizeRemoveCabecaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.sucessorTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaEncadeadaTestCase.toArrayTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaFila.desenfileirarTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaFila.enfileirarTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaFila.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaFila.filaVaziaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaFila.isEmptyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaFila.verificarCabecaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaFilaEncadeada.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaListaDuplamenteEncadeada.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaListaDuplamenteEncadeada.imprimeEmOrdemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaListaDuplamenteEncadeada.imprimeInversoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaListaDuplamenteEncadeada.inserePrimeiroTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaListaDuplamenteEncadeada.insertRemoverTeste.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaListaDuplamenteEncadeada.removePrimeiro.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaListaDuplamenteEncadeada.removeUltimoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaListaDuplamenteEncadeada.sizeRemoveCabecaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaListaDuplamenteEncadeada.toArrayTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaPilha.desempilharTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaPilha.empilharTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaPilha.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaPilha.isEmptyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaPilha.multitopTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaPilha.pilhaCheiaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaPilha.pilhaVaziaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaPilha.topoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestaPilhaEncadeada.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/tau/Documents/TAD1/RoteiroEDA_TAD1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.25287357&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in RoteiroEDA_TAD">
+    <configuration name="All in RoteiroEDA_TAD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RoteiroEDA_TAD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConjuntoDinamicoEncadeadoTestCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RoteiroEDA_TAD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ConjuntoDinamicoEncadeadoTestCase" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConjuntoDinamicoTestCase" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="RoteiroEDA_TAD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ConjuntoDinamicoTestCase" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConjuntoDinamicoTestCase.buscarFailTeste" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RoteiroEDA_TAD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ConjuntoDinamicoTestCase" />
+      <option name="METHOD_NAME" value="buscarFailTeste" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestaFilaEncadeada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RoteiroEDA_TAD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestaFilaEncadeada" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestaPilhaEncadeada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RoteiroEDA_TAD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestaPilhaEncadeada" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in RoteiroEDA_TAD" />
+        <item itemvalue="JUnit.ConjuntoDinamicoEncadeadoTestCase" />
+        <item itemvalue="JUnit.TestaPilhaEncadeada" />
+        <item itemvalue="JUnit.TestaFilaEncadeada" />
+        <item itemvalue="JUnit.ConjuntoDinamicoTestCase.buscarFailTeste" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1011b589-d08b-4041-a9e2-87bcecadadb2" name="Changes" comment="" />
+      <created>1712328806988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712328806988</updated>
+      <workItem from="1712328808009" duration="996000" />
+      <workItem from="1712672075664" duration="1679000" />
+      <workItem from="1713276769424" duration="3099000" />
+      <workItem from="1727180607336" duration="6924000" />
+      <workItem from="1728389622528" duration="8801000" />
+      <workItem from="1728409223300" duration="1971000" />
+      <workItem from="1728411450305" duration="10000" />
+      <workItem from="1728411465277" duration="690000" />
+      <workItem from="1728412158856" duration="12000" />
+      <workItem from="1728412172727" duration="194000" />
+      <workItem from="1728412495184" duration="105000" />
+    </task>
+    <task id="LOCAL-00001" summary="Origin">
+      <option name="closed" value="true" />
+      <created>1728410514900</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728410514900</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Origin">
+      <option name="closed" value="true" />
+      <created>1728411908425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728411908425</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Origin">
+      <option name="closed" value="true" />
+      <created>1728412033837</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728412033837</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Origin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Origin" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tad/pilha/MinhaPilha.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
