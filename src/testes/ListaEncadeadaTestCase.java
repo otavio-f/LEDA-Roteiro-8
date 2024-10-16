@@ -28,7 +28,10 @@ public class ListaEncadeadaTestCase {
 		assertEquals("", listaEnc.imprimeEmOrdem());
 		listaEnc.insert(2);
 		assertEquals("2", listaEnc.imprimeEmOrdem());
-		assertArrayEquals(new Integer[2], listaEnc.toArray(Integer.class));
+		// assertArrayEquals(new Integer[2], listaEnc.toArray(Integer.class));
+		// BUG: nunca vai ser satisfeito. Erro de digitação, talvez??
+		// Substituído pelo teste equivalente na sequência em toArrayTest()
+		assertArrayEquals(new Integer[] {2}, listaEnc.toArray(Integer.class)); // Substitui teste anterior
 		listaEnc.insert(10);
 		assertEquals("2, 10", listaEnc.imprimeEmOrdem());
 		listaEnc.insert(5);
@@ -87,6 +90,10 @@ public class ListaEncadeadaTestCase {
         assertNull(listaEnc.search(20));
 		listaEnc.insert(20);
 		assertEquals(new NodoListaEncadeada<Integer>(20), listaEnc.search(20));
+		// BUG: NodoListaEncadeada.equals() usa equals pra comparar proximo,
+		// se o NodoListaEncadeada.proximo for null (como esperado no teste abaixo), o programa quebra
+		// ou remove o assertEquals acima
+		// ou considerar o null em NodoListaEncadeada.equals(), o que foi feito
 		assertNull(listaEnc.search(20).getProximo());
 		listaEnc.insert(15);
 		assertEquals(new NodoListaEncadeada<Integer>(15), listaEnc.search(15));
@@ -118,6 +125,11 @@ public class ListaEncadeadaTestCase {
 	@Test
 	public void insertRemoverTeste() {
 		assertThrows(ListaVaziaException.class, () -> {
+			//BUG: Pegar qualquer checked exception aqui nunca vai ser satisfeito
+			// precisaria mudar a assinatura na interface pra incluir "throws ListaVaziaException"
+			// ou mudar a excecao esperada pra (Runtime)Exception
+			// ou remover o teste
+			// ou fazer ListaVaziaException unchecked exception (extends RuntimeException/Error), o que foi feito
 			listaEnc.remove(38);
 		});
 		
@@ -151,7 +163,9 @@ public class ListaEncadeadaTestCase {
 		
 		assertEquals(new NodoListaEncadeada<Integer>(69), listaEnc.remove(69));
 		assertEquals("38", listaEnc.imprimeEmOrdem());
-		assertArrayEquals(new Integer[] {69}, listaEnc.toArray(Integer.class));
+		// BUG: Array deveria ser {38} já que o 69 foi removido
+		// assertArrayEquals(new Integer[] {69}, listaEnc.toArray(Integer.class));
+		assertArrayEquals(new Integer[] {38}, listaEnc.toArray(Integer.class));
 		
 		assertEquals(new NodoListaEncadeada<Integer>(38), listaEnc.remove(38));
 		assertEquals("", listaEnc.imprimeEmOrdem());

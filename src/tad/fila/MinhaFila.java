@@ -25,34 +25,42 @@ public class MinhaFila implements FilaIF<Integer> {
 	}
 
 	@Override
-	public void enfileirar(Integer item) {
-		throw new UnsupportedOperationException("Implementar");
-		
+	public void enfileirar(Integer item) throws FilaCheiaException {
+		if(this.isFull())
+			throw new FilaCheiaException();
+		this.meusDados[this.cauda-1] = item;
+		this.cauda++;
 	}
 
 	@Override
-	public Integer desenfileirar() {
-		throw new UnsupportedOperationException("Implementar");
+	public Integer desenfileirar() throws FilaVaziaException {
+		if(this.isEmpty())
+			throw new FilaVaziaException();
+		final Integer resultado = this.meusDados[this.cabeca];
+		for(int i=this.cabeca+1; i<this.cauda-1; i++)
+			this.meusDados[i-1] = this.meusDados[i];
+		this.cauda--;
+		return resultado;
 	}
 
 	@Override
 	public Integer verificarCauda() {
-		throw new UnsupportedOperationException("Implementar");
+		return this.meusDados[this.cauda-1];
 	}
 
 	@Override
 	public Integer verificarCabeca() {
-		throw new UnsupportedOperationException("Implementar");
+		return this.meusDados[this.cabeca];
 	}
 
 	@Override
 	public boolean isEmpty() {
-		throw new UnsupportedOperationException("Implementar");
+		return (this.cauda-1 == 0);
 	}
 
 	@Override
 	public boolean isFull() {
-		throw new UnsupportedOperationException("Implementar");
+		return (this.cauda > this.tamanho);
 	}
 
 }

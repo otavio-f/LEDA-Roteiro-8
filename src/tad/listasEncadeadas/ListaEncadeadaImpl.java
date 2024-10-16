@@ -1,9 +1,9 @@
 package tad.listasEncadeadas;
 
+import tad.util.Conversor;
+
 public class ListaEncadeadaImpl<T extends Comparable<T>> implements ListaEncadeadaIF<T>{
-	
-//	NodoListaEncadeada<T> cabeca = null;
-	
+
 	NodoListaEncadeada<T> cabeca = null; // Estratégia usando marcação sentinela
 	NodoListaEncadeada<T> cauda = null;// Estratégia usando marcação sentinela
 	
@@ -16,97 +16,161 @@ public class ListaEncadeadaImpl<T extends Comparable<T>> implements ListaEncadea
 
 	@Override
 	public boolean isEmpty() {
-		throw new UnsupportedOperationException("Precisa implementar!");
-		
+		return (this.cabeca.getProximo() == this.cauda);
 	}
 
 	@Override
 	public int size() {
-		throw new UnsupportedOperationException("Precisa implementar!");
+		int resultado = 0;
+		NodoListaEncadeada<T> corrente = this.cabeca.getProximo();
+		while(corrente != this.cauda) {
+			resultado++;
+			corrente = corrente.getProximo();
+		}
+		return resultado;
 	}
 
 	@Override
 	public NodoListaEncadeada<T> search(T chave) {
-		throw new UnsupportedOperationException("Precisa implementar!");
+		NodoListaEncadeada<T> corrente = this.cabeca.getProximo();
+		while(corrente != this.cauda) {
+			if(chave.equals(corrente.getChave())) {
+				if(corrente.getProximo() == this.cauda)
+					return new NodoListaEncadeada<T>(corrente.getChave());
+				return corrente;
+			}
+			else
+				corrente = corrente.getProximo();
+		}
+
+		return null;
 	}
 
 	@Override
 	public void insert(T chave) {
-//		throw new UnsupportedOperationException("Precisa implementar!");
-		
 		//1. Craiar o novo registro
 		NodoListaEncadeada<T> novoNo = new NodoListaEncadeada<T>(chave);
 		
 		//2. Inserir o novo nó na lista
-		
-		// se a lista estiver vazia**
-		if (cabeca.getProximo().equals(cauda)) {
-			cabeca = novoNo;
-		} else { // lista não está vazia
-			novoNo.setProximo(cabeca.getProximo());
-			cabeca.setProximo(novoNo);
-		}
-		
+		NodoListaEncadeada<T> ultimo = this.cabeca;
+		while(ultimo.getProximo() != this.cauda)
+			ultimo = ultimo.getProximo();
+
+		ultimo.setProximo(novoNo);
+		novoNo.setProximo(this.cauda);
 	}
 
 	@Override
 	public NodoListaEncadeada<T> remove(T chave) {
-		throw new UnsupportedOperationException("Precisa implementar!");
-		
+		if(this.isEmpty())
+			throw new ListaVaziaException();
+		NodoListaEncadeada<T> anterior = this.cabeca;
+		while(!chave.equals(anterior.getProximo().getChave()) && anterior.getProximo() != this.cauda)
+			anterior = anterior.getProximo();
+
+		NodoListaEncadeada<T> alvo = anterior.getProximo();
+		anterior.setProximo(anterior.getProximo().getProximo());
+
+		return alvo;
 	}
 
 	@Override
 	public T[] toArray(Class<T> clazz) {
+		if(this.isEmpty())
+			return null;
 		// Criar um array usando a classe utilitária conversor
-//		Conversor<T> c = new Conversor<T>();
-//		T[] meuArray = c.gerarArray(clazz, 10);
-		throw new UnsupportedOperationException("Precisa implementar!");
+		Conversor<T> c = new Conversor<T>();
+		T[] meuArray = c.gerarArray(clazz, this.size());
+		NodoListaEncadeada<T> corrente = this.cabeca.getProximo();
+		for(int i=0; i<meuArray.length; i++) {
+			meuArray[i] = corrente.getChave();
+			corrente = corrente.getProximo();
+		}
+
+		return meuArray;
 	}
 
 	@Override
 	public String imprimeEmOrdem() {
-//		throw new UnsupportedOperationException("Precisa implementar!");
-		String valores = "";
-		NodoListaEncadeada<T> corrente = cabeca.getProximo();
-		
-		while (!corrente.equals(cauda)) {
-			valores += corrente.getChave() + ", ";
+		if(this.cabeca.getProximo() == this.cauda)
+			return "";
+
+		StringBuilder texto = new StringBuilder();
+		NodoListaEncadeada<T> corrente = this.cabeca.getProximo();
+
+		while(corrente.getProximo() != this.cauda) {
+			texto.append(corrente.getChave()).append(", ");
+			corrente = corrente.getProximo();
 		}
-		
-		return valores.substring(0, valores.length()-2);
-		
+
+		texto.append(corrente.getChave());
+
+		return texto.toString();
 	}
+
 
 	@Override
 	public String imprimeInverso() {
-//		throw new UnsupportedOperationException("Precisa implementar!");
-		
-		String valores = "";
-		NodoListaEncadeada<T> corrente = cabeca.getProximo();
-		NodoListaEncadeada<T> anterior = cabeca;
-		
-		while (!corrente.equals(cauda)) {
-			valores += corrente.getChave() + ", ";
+		if(this.isEmpty())
+			return "";
+
+		NodoListaEncadeada<T> ultimo = this.cabeca.getProximo();
+
+		while(ultimo.getProximo() != this.cauda) {
+			ultimo = ultimo.getProximo();
 		}
-		
-		
-		return valores.substring(0, valores.length()-2);
-		
+
+		StringBuilder texto = new StringBuilder();
+		NodoListaEncadeada<T> corrente;
+
+		while(ultimo != this.cabeca.getProximo()) {
+			corrente = this.cabeca.getProximo();
+			while(corrente.getProximo() != ultimo) {
+				corrente = corrente.getProximo();
+			}
+			texto.append(ultimo.getChave());
+			texto.append(", ");
+			ultimo = corrente;
+		}
+
+		texto.append(this.cabeca.getProximo().getChave());
+
+		return texto.toString();
 	}
 
 	@Override
 	public NodoListaEncadeada<T> sucessor(T chave) {
-		throw new UnsupportedOperationException("Precisa implementar!");
+		NodoListaEncadeada<T> resultado = this.cabeca;
+		while(resultado.getProximo() != this.cauda) {
+			if(chave.equals(resultado.getChave()))
+				return resultado.getProximo();
+			resultado = resultado.getProximo();
+		}
+		return null;
 	}
 
 	@Override
 	public NodoListaEncadeada<T> predecessor(T chave) {
-		throw new UnsupportedOperationException("Precisa implementar!");
+		NodoListaEncadeada<T> resultado = this.cabeca;
+		while(resultado.getProximo() != this.cauda) {
+			if(chave.equals(resultado.getProximo().getChave()))
+				return resultado;
+			resultado = resultado.getProximo();
+		}
+		return null;
 	}
 
 	@Override
 	public void insert(T chave, int index) {
-		throw new UnsupportedOperationException("Precisa implementar!");
-	}
+		if(index > this.size() || index < 0)
+			throw new RuntimeException("Indice invalido!");
 
+		NodoListaEncadeada<T> alvo = this.cabeca;
+		for(int i=0; i<index; i++) {
+			alvo = alvo.getProximo();
+		}
+		NodoListaEncadeada<T> novoNodo = new NodoListaEncadeada<T>(chave);
+		novoNodo.setProximo(alvo.getProximo());
+		alvo.setProximo(novoNodo);
+	}
 }

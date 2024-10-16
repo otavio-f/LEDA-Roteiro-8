@@ -15,7 +15,9 @@ public class ConjuntoDinamicoTestCase {
 	public void iniciar() {
 		cd = new MeuConjuntoDinamico();
 	}
-	
+
+	// BUG: faltava o @Test
+	@Test
 	public void tamanhoTest() {
 		assertEquals(0, cd.tamanho());
 		cd.inserir(2);
@@ -137,7 +139,10 @@ public class ConjuntoDinamicoTestCase {
 		cd.inserir(5);
 		cd.inserir(10);
 		cd.inserir(8);
-		assertEquals(criarInteiro(4),cd.sucessor(4));
+		// BUG: deveria ser 5
+		// assertEquals(criarInteiro(4),cd.sucessor(4));
+		// FIX: mudar criarInteiro(4) pra criarInteiro(5)
+		assertEquals(criarInteiro(5),cd.sucessor(4));
 		assertEquals(criarInteiro(10),cd.sucessor(5));
 		assertNull(cd.sucessor(8));
 		assertEquals(criarInteiro(8),cd.sucessor(10));

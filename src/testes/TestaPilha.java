@@ -1,9 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tad.pilha.MinhaPilha;
-import tad.pilha.PilhaCheiaException;
-import tad.pilha.PilhaIF;
-import tad.pilha.PilhaVaziaException;
+import tad.pilha.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -47,6 +47,9 @@ public class NodoListaEncadeada<T extends Comparable<T>> {
 		}
 		@SuppressWarnings("unchecked")
 		NodoListaEncadeada<T> aComparar = ((NodoListaEncadeada<T>) obj);
+		if(this.proximo == null) // so compara chave se proximo do objeto que chamou for nulo
+			return (this.chave == aComparar.chave || this.chave.equals(aComparar.chave));
+		// BUG: Se o this.proximo for null, aqui quebra com NullPointerException, fix acima
 		if ( (this.chave.compareTo(aComparar.getChave()) == 0) &&
 				(this.getProximo().equals(aComparar.getProximo())) ) {
 			return true;

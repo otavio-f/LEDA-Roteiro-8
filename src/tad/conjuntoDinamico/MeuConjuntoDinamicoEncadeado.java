@@ -2,6 +2,8 @@ package tad.conjuntoDinamico;
 
 import tad.listasEncadeadas.ListaDuplamenteEncadeadaImpl;
 import tad.listasEncadeadas.ListaEncadeadaIF;
+import tad.listasEncadeadas.NodoListaDuplamenteEncadeada;
+import tad.listasEncadeadas.NodoListaEncadeada;
 
 public class MeuConjuntoDinamicoEncadeado implements ConjuntoDinamicoIF<Integer> {
 
@@ -10,50 +12,73 @@ public class MeuConjuntoDinamicoEncadeado implements ConjuntoDinamicoIF<Integer>
 
 	@Override
 	public void inserir(Integer item) {
-		// TODO Auto-generated method stub
+		meusDados.insert(item);
 		
 	}
 
 	@Override
 	public Integer remover(Integer item) throws ConjuntoVazioException {
-		// TODO Auto-generated method stub
-		return null;
+		if(this.tamanho() == 0)
+			throw new ConjuntoVazioException("Conjunto vazio!");
+		return this.meusDados.remove(item).getChave();
 	}
 
 	@Override
 	public Integer predecessor(Integer item) {
-		// TODO Auto-generated method stub
-		return null;
+		if(this.tamanho() == 0)
+			throw new RuntimeException("Conjunto Vazio!");
+		final NodoListaDuplamenteEncadeada<Integer> alvo = (NodoListaDuplamenteEncadeada<Integer>) this.meusDados.search(item);
+		if(alvo == null)
+			throw new RuntimeException("Nao encontrado!");
+		if(alvo.getAnterior() == null)
+			return null;
+		return alvo.getAnterior().getChave();
 	}
 
 	@Override
 	public Integer sucessor(Integer item) {
-		// TODO Auto-generated method stub
-		return null;
+		if(this.tamanho() == 0)
+			throw new RuntimeException("Conjunto Vazio!");
+		final NodoListaEncadeada<Integer> alvo = this.meusDados.search(item);
+		if(alvo == null)
+			throw new RuntimeException("Nao encontrado!");
+		if(alvo.getProximo() == null)
+			return null;
+		return alvo.getProximo().getChave();
 	}
 
 	@Override
 	public int tamanho() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.meusDados.size();
 	}
 
 	@Override
 	public Integer buscar(Integer item) {
-		// TODO Auto-generated method stub
-		return null;
+		final NodoListaEncadeada<Integer> resultado = this.meusDados.search(item);
+		if(resultado == null)
+			return null;
+		return resultado.getChave();
 	}
 
 	@Override
 	public Integer minimum() {
-		// TODO Auto-generated method stub
-		return null;
+		Integer[] lista = this.meusDados.toArray(Integer.class);
+		Integer resultado = lista[0];
+		for(int i=1; i<lista.length; i++) {
+			if(lista[i].compareTo(resultado) < 0)
+				resultado = lista[i];
+		}
+		return resultado;
 	}
 
 	@Override
 	public Integer maximum() {
-		// TODO Auto-generated method stub
-		return null;
+		Integer[] lista = this.meusDados.toArray(Integer.class);
+		Integer resultado = lista[0];
+		for(int i=1; i<lista.length; i++) {
+			if(lista[i].compareTo(resultado) > 0)
+				resultado = lista[i];
+		}
+		return resultado;
 	}
-
 }

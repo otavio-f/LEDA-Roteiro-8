@@ -2,10 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import tad.conjuntoDinamico.ConjuntoVazioException;
-import tad.fila.FilaCheiaException;
-import tad.fila.FilaIF;
-import tad.fila.FilaVaziaException;
-import tad.fila.MinhaFila;
+import tad.fila.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 

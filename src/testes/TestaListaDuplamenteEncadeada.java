@@ -22,7 +22,10 @@ public class TestaListaDuplamenteEncadeada {
 		assertEquals("", listaDuplaEnc.imprimeEmOrdem());
 		listaDuplaEnc.insert(2);
 		assertEquals("2", listaDuplaEnc.imprimeEmOrdem());
-		assertArrayEquals(new Integer[2], listaDuplaEnc.toArray(Integer.class));
+		// assertArrayEquals(new Integer[2], listaDuplaEnc.toArray(Integer.class));
+		// BUG: nunca vai ser satisfeito. Erro de digitação, talvez??
+		// Substituído pelo teste equivalente na sequência em toArrayTest()
+		assertArrayEquals(new Integer[] {2}, listaDuplaEnc.toArray(Integer.class));
 		listaDuplaEnc.insert(10);
 		assertEquals("2, 10", listaDuplaEnc.imprimeEmOrdem());
 		listaDuplaEnc.insert(5);
@@ -132,7 +135,9 @@ public class TestaListaDuplamenteEncadeada {
 		
 		assertEquals(new NodoListaDuplamenteEncadeada<Integer>(69), listaDuplaEnc.remove(69));
 		assertEquals("38", listaDuplaEnc.imprimeEmOrdem());
-		assertArrayEquals(new Integer[] {69}, listaDuplaEnc.toArray(Integer.class));
+		// BUG: Array deveria ser {38} já que o 69 foi removido
+		// assertArrayEquals(new Integer[] {69}, listaDuplaEnc.toArray(Integer.class));
+		assertArrayEquals(new Integer[] {38}, listaDuplaEnc.toArray(Integer.class));
 		
 		assertEquals(new NodoListaDuplamenteEncadeada<Integer>(38), listaDuplaEnc.remove(38));
 		assertEquals("", listaDuplaEnc.imprimeEmOrdem());
