@@ -1,6 +1,10 @@
 package tad.listasEncadeadas;
 
-public class ListaVaziaException extends Exception {
+// BUG: Nao pode lançar essa exceção sem mudar a assinatura
+// public class ListaVaziaException extends Exception {
+
+// FIX: Mudar pra subclasse de RuntimeException
+public class ListaVaziaException extends RuntimeException {
 	
 	/**
 	 * 
